@@ -1,0 +1,54 @@
+\section{Задание 3}
+\begin{multline*}
+    \int \frac{2x^3+7x^2+7x-1}{(x+2)^2(x^2-x+1)} \, dx =
+        \int \frac{A}{(x+2)^2}+\frac{B}{x+2}+\frac{C x+D}{x^2-x+1} \, dx = \\ =
+        \int \frac{x^3 (B+C) + x^2 (A+B+4 C+D)+x (-A-B+4 C+4 D)+A+2 B+4
+            D}{(x+2)^2 \left(x^2-x+1\right)} \, dx = (*)
+\end{multline*}
+
+\HRule
+
+\[ 
+\left\{ 
+    \begin{array}{l}
+        B + C = 2 \\
+        A + B + 4 C + D = 7 \\
+        -A - B + 4 C + 4 D = 7 \\
+        A + 2 B + 4 D = -1
+    \end{array}
+\right.
+\]
+
+\[ A = -\frac{3}{7}, B = \frac{6}{49}, C = \frac{92}{49}, D = -\frac{10}{49} \]
+
+\HRule
+
+\begin{multline*}
+    (*) = \int \frac{2 (46 x-5)}{49 \left(x^2-x+1\right)}+\frac{6}{49
+            (x+2)}-\frac{3}{7 (x+2)^2} \, dx = 
+        -\frac{3}{7} \int \frac{1}{(x+2)^2} \, dx + \\ + \frac{6}{49} \int
+            \frac{1}{x+2} \, dx + 
+            \frac{2}{49} \int \frac{46 x-5}{x^2-x+1}\, dx = (**)
+\end{multline*}
+
+\HRule
+
+\[ \int \frac{dx}{(x+2)^2} = -\frac{1}{x+2} \]
+\[ \int \frac{dx}{x+2} = \ln |x + 2| \]
+
+\begin{multline*}
+    \int \frac{46 x - 5}{x^2 - x + 1} \, dx = 
+        \int \frac{23(2x-1)+18}{x^2-x+1} \, dx =
+        23 \int \frac{d(x^2-x+1)}{x^2-x+1} + 18 \int \frac{dx}{x^2-x+1} = \\ =
+        23 \ln |x^2 - x + 1| + 
+            18 \int \frac{dx}{(x-\frac{1}{2})^2+(\frac{\sqrt{3}}{2})^2} = 
+        23 \ln |x^2-x+1| + 12\sqrt{3}\arctg\frac{2x-1}{\sqrt{3}}
+\end{multline*}
+
+\HRule
+
+\[ (**) = \frac{3}{7}\cdot\frac{1}{x+2} + \frac{6}{49} \ln|x+2| + 
+    \frac{2}{49} \left( 23 \ln |x^2-x+1| + 12\sqrt{3}\arctg\frac{2x-1}{\sqrt{3}}
+    \right) + C.
+\]
+

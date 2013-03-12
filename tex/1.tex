@@ -1,0 +1,15 @@
+\section{Задание 1}
+\begin{multline*}
+    \int \ctg^5 x \, dx = 
+        \int \ctg x \left(\frac{1}{\sin^2 x} - 1\right)^2 \, dx = 
+        \int \ctg x \left(\frac{1}{\sin^4 x} - 
+            \frac{2}{\sin^2 x} + 1\right) \, dx = \\ =
+        \int \frac{\ctg x}{\sin^4 x} \, dx - 
+            \int \frac{2\ctg x}{\sin^2 x} \, dx + \int \ctg x \, dx =
+        \int \frac{\cos x}{\sin^5 x} \, dx - 
+            2 \int \frac{\cos x}{\sin^3 x} \, dx + 
+            \int \frac{\cos x}{\sin x} \, dx = \\ =
+        \int \frac{d \sin x}{\sin^5 x} - 2 \int \frac{d \sin x}{\sin^3 x} +
+            \int \frac{d \sin x}{\sin x} = 
+            -\frac{1}{4 \sin^4 x} + \frac{1}{\sin^2 x} + \ln |\sin x| + C.
+\end{multline*}

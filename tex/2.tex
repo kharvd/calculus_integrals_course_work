@@ -1,0 +1,69 @@
+\section{Задание 2}
+\begin{multline*}
+    \int \sqrt{\sin 2x} \cos x \, dx = \int \sqrt{\sin 2x} \cos x \, dx =
+        \int \sqrt{\sin 2x} \left| \cos x\right| \sgn \cos x \, dx = \\ =
+        \sgn \cos x \int \sqrt{\frac{\sin 2x (1 + \cos 2x)}{2}} \, dx =
+        \sgn \cos x \int \sqrt{\frac{\tg
+            x}{1+\tg^2x}\left(1+\frac{1-\tg^2x}{1+\tg^2x}\right)} \, dx = \\ =
+        \sgn \cos x \int \frac{\sqrt{2\tg x}}{1+\tg^2x} \, dx = 
+        \left| \begin{array}{l}
+            t = \sqrt{\tg x} \\
+            t^2 = \tg x \\
+            d \tg x = 2t \, dt \\
+            \displaystyle\frac{dx}{\cos^2 x} = 2t \, dt \\[0.3cm]
+            dx = 2t \cos^2 x \, dt \\
+        dx = \displaystyle\frac{2t}{t^4+1} \, dt
+        \end{array} \right| = 
+        2 \sqrt{2} \sgn \cos x \int \frac{t^2}{(1+t^4)^2} \, dt = (*)
+\end{multline*}
+
+\HRule
+
+Применим метод Остроградского:
+\[ \int \frac{t^2}{(1+t^4)^2} \, dt = \frac{a t^3+b t^2+c t+d}{t^4+1}+ \int \frac{e t^3+f t^2+g t+h}{t^4+1} \, dt \]
+\[ \frac{t^2}{(1+t^4)^2} = \left(\frac{a t^3+b t^2+c
+    t+d}{t^4+1}\right)' + \frac{e t^3+f t^2+g t+h}{t^4+1} \]
+\[ \frac{t^2}{(1+t^4)^2} = -\frac{4 t^3 \left(a t^3+b t^2+c
+    t+d\right)}{\left(t^4+1\right)^2}+\frac{3 a t^2+2 b t+c}{t^4+1}+\frac{e
+    t^3+f t^2+g t+h}{t^4+1} \]
+\[ \frac{t^2}{(1+t^4)^2} = \frac{t^6 (f-a)+t^2 (3 a+f)+t^5 (g-2 b)+t (2 b+g)+
+    t^4 (h-3 c)+c+t^3 (e-4 d)+e t^7+h}{\left(t^4+1\right)^2} \]
+\[ a = f = \frac{1}{4} \]
+\[ b = c = d = e = g = h = 0 \]
+\[ \int \frac{t^2}{(1+t^4)^2} \, dt = \frac{t^3}{4 \left(t^4+1\right)}+
+    \frac{1}{4} \int \frac{t^2}{t^4+1} \, dt\]
+
+\HRule
+
+\begin{multline*}
+    \int \frac{t^2}{t^4+1} \, dt = \int \left(\frac{a t+b}{t^2-\sqrt{2}
+        t+1}+\frac{c t+d}{t^2+\sqrt{2} t+1}\right) \, dt = \\ =
+    \int \frac{t^2 \left(\sqrt{2} a+b-\sqrt{2} c+d\right)+
+        t \left(a+\sqrt{2} b+c-\sqrt{2} d\right)+t^3 (a+c)+b+d}{t^4+1} \, dt 
+\end{multline*}
+
+\[ a = \frac{1}{2 \sqrt{2}}, b = 0, c = -\frac{1}{2 \sqrt{2}}, d = 0 \]
+
+\begin{multline*}
+    \int \left(\frac{t}{2 \sqrt{2} \left(t^2-\sqrt{2} t+1\right)}-\frac{t}{2 \sqrt{2}
+        \left(t^2+\sqrt{2} t+1\right)}\right) \, dt = \\ =
+        \frac{1}{2\sqrt{2}} \int \frac{t}{t^2-\sqrt{2} t+1} \, dt -
+        \frac{1}{2\sqrt{2}} \int \frac{t}{t^2+\sqrt{2} t+1} \, dt = \\ =
+        \frac{1}{2\sqrt{2}} \left( \frac{1}{2} \int
+        \frac{d(t^2-\sqrt{2}t+1)}{t^2-\sqrt{2}t+1} - \frac{1}{2} \int
+        \frac{d(t^2+\sqrt{2}t+1)}{t^2+\sqrt{2}t+1} + \right. \\ + \left. \frac{\sqrt{2}}{2} \int
+        \frac{dt}{t^2-\sqrt{2}t+1} + \frac{\sqrt{2}}{2} \int
+        \frac{dt}{t^2+\sqrt{2}t+1}\right) = \\ =
+        \frac{1}{4\sqrt{2}}\left(\ln
+        \left|\frac{t^2-\sqrt{2}t+1}{t^2+\sqrt{2}t+1}\right|+ 
+        2\arctg(\sqrt{2}t-1) + 2\arctg(\sqrt{2}t+1)\right)
+\end{multline*}
+
+\HRule
+
+\[ (*) = \frac{1}{8}\sgn \cos x \left(\frac{4 \sqrt{2} t^3}{t^4+1}+
+        \ln \left|\frac{t^2-\sqrt{2}t+1}{t^2+\sqrt{2}t+1}\right|+ 
+        2\arctg(\sqrt{2}t-1) + 2\arctg(\sqrt{2}t+1)\right) + C,
+    \]
+где $ t = \sqrt{\tg x} $.
+

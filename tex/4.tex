@@ -1,0 +1,21 @@
+\section{Задание 4}
+\begin{multline*}
+    \int \frac{dx}{(\sin x + \cos x + 1)^2} =
+        \int \frac{dx}{\left(\displaystyle\frac{2\tg\frac{x}{2}}{1+\tg^2\frac{x}{2}} + 
+            \displaystyle\frac{1-\tg^2\frac{x}{2}}{1+\tg^2\frac{x}{2}} + 1\right)^2} =
+        \frac{1}{4} \int \left( \frac{1+\tg^2 \frac{x}{2}}{\tg\frac{x}{2} +
+    1}\right)^2 \, dx = \\ =
+    \left| \begin{array}{l}
+        t = \tg\frac{x}{2} \\[0.3cm]
+        \displaystyle\frac{x}{2} = \arctg t \\[0.3cm]
+        \displaystyle\frac{dx}{2} = \displaystyle\frac{dt}{1+t^2} \\[0.3cm]
+        dx = \displaystyle\frac{2 dt}{1+t^2}
+    \end{array} \right| = \frac{1}{4} \int \left(\frac{1+t^2}{1+t}\right)^2
+        \frac{2}{1+t^2} \, dt = \frac{1}{2} \int \frac{1+t^2}{(1+t)^2} \, dt = 
+        \frac{1}{2} \int \left(1 - \frac{2t}{(1+t)^2}\right) \, dt = \\ =
+        \frac{t}{2} - \int \frac{t}{(1+t)^2}\, dt = 
+        \frac{t}{2} - \int \frac{dt}{1+t} + \int \frac{dt}{(1+t)^2} = 
+        \frac{t}{2} - \ln |1+t| - \frac{1}{1+t} = \\ =
+        \frac{1}{2}\tg\frac{x}{2} - \ln |1+\tg\frac{x}{2}| -
+            \frac{1}{1+\tg\frac{x}{2}} + C. 
+\end{multline*}
