@@ -1,0 +1,12 @@
+\section{Задание 10}
+\begin{multline*}
+    \int \arctg(1+\sqrt{x}) \, dx = \left|\begin{array}{l}
+                                            1+\sqrt{x} = t \\
+                                            dx = (2t-2)\,dt
+                                          \end{array}\right| = 
+    \int (2t-2)\arctg t \, dt = \int \arctg t (t^2-2t)' \, dt = \\
+    = (t^2-2t)\arctg t - \int (t^2-2t) \cdot \frac{1}{1+t^2} \, dt = 
+    (t^2-2t)\arctg t - t - \arctg t - \ln (1+t^2) + C =\\ = (t^2-2t-1)\arctg t - 
+    \ln (1+t^2) + t + C,
+\end{multline*}
+где $ t = 1+\sqrt{x} $.

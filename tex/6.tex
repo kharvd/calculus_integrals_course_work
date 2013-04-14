@@ -1,0 +1,44 @@
+\section{Задание 6}
+\[ I = \int \frac{2 x+3}{\sqrt{x^2+1} \left(x^2-2 x+1\right)} \, dx \]
+Используем подстановку Эйлера:
+\[ \sqrt{x^2+1} = x + t \]
+\[ x = \frac{1-t^2}{2t} \]
+\[ dx = -\frac{1+t^2}{2t^2} \, dt \]
+
+\begin{multline*}
+    I = \int  \frac{8 t \left(t^2-3 t-1\right)}
+    {\left(t+\frac{1}{t}\right) \left(t^2+2 t-1\right)^2} \cdot
+    \frac{1 + t^2}{2t^2} \, dt = 
+    \int \frac{4 t \left(t^2-1\right) \left(t^2-3 t-1\right)}{\left(t^2+1\right)
+    \left(t^2+2 t-1\right)^2} \, dt = \\ = \frac{at + b}{t^2+2t-1} + 
+    \int \frac{ct^3 + dt^2 + et+f}{(t^2+2t-1)(1+t^2)} \, dt
+\end{multline*}
+
+\[ a = 11, b = -\frac{11}{2},c = 4,d= -9,e= 7,f= 0\]
+
+\[
+    I = \frac{11 (2 t-1)}{2 \left(t^2+2 t-1\right)} + \int \frac{4 t^3-9 t^2+7
+    t}{\left(t^2+1\right) \left(t^2+2 t-1\right)} \, dt =
+    \frac{11 (2 t-1)}{2 \left(t^2+2 t-1\right)} + I_1
+\]
+
+\begin{multline*}
+    I_1 = \int \frac{4 t^3-9 t^2+7 t}{\left(t^2+1\right) \left(t^2+2 t-1\right)}
+    \, dt = \int \frac{4t^3-9t^2+7t}{\left(t-\sqrt{2}+1\right)
+    \left(t+\sqrt{2}+1\right)(t^2+1)} = \\
+    = -\int \frac{3 (2 t+1)}{2 \left(t^2+1\right)} \, dt + \int \frac{17+14 \sqrt{2}}{4 \sqrt{2}
+    \left(t+\sqrt{2}+1\right)} \, dt + \int \frac{17-14 \sqrt{2}}{4 \sqrt{2}
+    \left(-t+\sqrt{2}-1\right)} \, dt \\ = \\ -\frac{3}{2} \ln
+    \left(t^2+1\right)+\frac{1}{8} \left(28+17 \sqrt{2}\right) \ln
+    \left(t+\sqrt{2}+1\right)+\frac{1}{8} \left(28-17 \sqrt{2}\right) \ln
+    \left(8 t-8 \sqrt{2}+8\right)-\frac{3}{2}  \arctg t + C
+\end{multline*}
+
+\begin{multline*}
+    I = \frac{11 (2 t-1)}{2 \left(t^2+2 t-1\right)} + -\frac{3}{2} \ln
+    \left(t^2+1\right)+\frac{1}{8} \left(28+17 \sqrt{2}\right) \ln
+    \left(t+\sqrt{2}+1\right)+ \\ +\frac{1}{8} \left(28-17 \sqrt{2}\right) \ln
+\left(8 t-8 \sqrt{2}+8\right)-\frac{3}{2}  \arctg t + C,
+\end{multline*}
+где $ t = \sqrt{x^2+1} - x $.
+

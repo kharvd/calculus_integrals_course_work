@@ -1,5 +1,16 @@
 \section{Задание 5}
-\begin{multline*}
-    \int \frac{\sqrt[3]{1+\sqrt[5]{x^4}}}{x^2 \sqrt[15]{x}} \, dx = 
+\[ \int \frac{\sqrt[3]{1+\sqrt[5]{x^4}}}{x^2 \sqrt[15]{x}} \, dx  = (*) \]
+Используем замену $ x = t^{5/4} $, $ dx = \frac{5}{4} t^{1/4} $.
 
+\begin{multline*}
+    (*) = \frac{5}{4} \int \frac{\sqrt[3]{1+t}}{t^{5/2} \cdot t^{1/12}} t^{1/4}
+    \, dt = \frac{5}{4}\int \frac{\sqrt[3]{1+t}}{t^{28/12}} \, dt = 
+    \frac{5}{4}\int \sqrt[3]{\frac{1+t}{t}} t^{-2} \, dt = 
+    \left|\begin{array}{l}
+        s = \sqrt[3]{\frac{1+t}{t}} \\
+        dt = -\frac{3s^2}{(s^3-1)^2} \, ds
+    \end{array}\right| = \\
+    = -\frac{15}{4}\int s^3 \, ds = -\frac{15}{4} \cdot \frac{s^4}{4} + C = 
+    -\frac{15}{16} \left(\sqrt[3]{\frac{1+t}{t}}\right)^4 + C = 
+    -\frac{15}{16} \cdot \frac{(1+x^{4/5})^{4/3}}{x^{16/15}} + C.
 \end{multline*}
